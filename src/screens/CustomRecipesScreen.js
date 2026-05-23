@@ -61,7 +61,7 @@ import {
             onPress={() => navigation.goBack()}
             style={styles.backButton}
           >
-            <Text>Back</Text>
+            <Text>GoBack</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={handleToggleFavorite}

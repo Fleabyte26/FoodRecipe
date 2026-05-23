@@ -64,7 +64,15 @@ import {
               recipes.map((recipe, index) => (
                 <View key={index} style={styles.recipeCard} testID="recipeCard">
                   <TouchableOpacity testID="handlerecipeBtn" onPress={() => handlerecipeClick(recipe)}>
-                  
+                    <View testID="imageContainer">
+                      <Image
+                        source={{ uri: recipe.image }}
+                        style={[
+                          styles.recipeImage,
+                          { height: index % 3 === 0 ? hp(25) : hp(35) },
+                        ]}
+                      />
+                    </View>
                     <Text style={styles.recipeTitle}>{recipe.title}</Text>
                     <Text style={styles.recipeDescription} testID="recipeDescp">
                   
@@ -187,4 +195,3 @@ import {
       fontSize: hp(1.8),
     },
   });
-  
